@@ -18,8 +18,8 @@ public class CreateUserTests extends TestRunner {
 
         User newUser = User.builder()
                 .username("perfdog_"+uniqueSuffix)
-                .firstname("Perf")
-                .lastname("Dog")
+                .firstName("Perf")
+                .lastName("Dog")
                 .email("perfdog_"+uniqueSuffix+"@example.com")
                 .password("P@ssw0rd_"+uniqueSuffix)
                 .phone("+1-555-0100")
