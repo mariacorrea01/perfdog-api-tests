@@ -7,6 +7,12 @@ import org.testng.annotations.BeforeSuite;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+/**
+ * Clase base de la que heredan todas las clases de test.
+ * Carga config.properties una unica vez, antes de que corra cualquier
+ * test de la suite (@BeforeSuite), y expone la URL base a traves de
+ * getBaseUrl(). Evita hardcodear la URL en el codigo o en cada test.
+ */
 @Slf4j
 public class TestRunner {
     public static final String PROPERTIES_FILE = "src/test/resources/config.properties";

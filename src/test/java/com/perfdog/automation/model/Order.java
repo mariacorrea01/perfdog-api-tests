@@ -6,6 +6,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * POJO que representa una orden de compra, segun el schema
+ * /store/order de la Swagger Petstore API.
+ */
 @Data
 @Builder
 @AllArgsConstructor

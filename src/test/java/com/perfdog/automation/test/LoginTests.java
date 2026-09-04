@@ -13,8 +13,19 @@ import static org.testng.Assert.assertTrue;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-
+/**
+ * Funcionalidad 2: Hacer login con un usuario recien creado.
+ * Test independiente: crea su propio usuario dentro del mismo metodo,
+ * no depende de que CreateUserTests haya corrido antes.
+ */
 public class LoginTests extends TestRunner {
+    /**
+     * Setup: crea un usuario nuevo via POST /user.
+     * Test real: hace login con esas mismas credenciales via
+     * GET /user/login y valida:
+     * - que la API responda 200 OK.
+     * - que el mensaje de respuesta confirme una sesion iniciada.
+     */
     @Test(testName = "Validate login with a newly created user")
     public void loginTest(){
         String id = UUID.randomUUID().toString().substring(0,8);

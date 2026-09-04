@@ -6,6 +6,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Envelope generico que devuelve la Petstore API en operaciones de
+ * escritura (POST /user, GET /user/login, GET /user/logout):
+ * {"code": 200, "type": "unknown", "message": "..."}
+ */
 @Data
 @Builder
 @AllArgsConstructor

@@ -11,8 +11,19 @@ import java.util.List;
 import java.util.Map;
 
 import static org.testng.Assert.*;
-
+/**
+ * Funcionalidad 3: Listar todas las mascotas con status "disponible".
+ * Test independiente: no depende de datos creados por otros tests,
+ * consulta directamente el catalogo publico de mascotas.
+ */
 public class ListAvailablePetsTests extends TestRunner {
+    /**
+     * Envia GET /pet/findByStatus?status=available y valida:
+     * - que la API responda 200 OK.
+     * - que la lista devuelta no este vacia.
+     * - que TODAS las mascotas de la lista tengan status "available"
+     *   (no solo la primera).
+     */
     @Test(testName = "Validate listing of avaliable pets")
     public void listAvaliablePestTests(){
         Map<String,String> queryParams = new HashMap<>();

@@ -14,7 +14,21 @@ import java.util.Map;
 
 import static org.testng.Assert.*;
 
+/**
+ * Funcionalidad 5: Crear una orden (compra) para una mascota.
+ * Test independiente: obtiene un petId valido consultando el catalogo
+ * disponible en el propio test, nunca usa un id hardcodeado.
+ */
 public class CreateOrderTests extends TestRunner {
+    /**
+     * Setup: consulta GET /pet/findByStatus?status=available y toma
+     * el id de la primera mascota de la lista.
+     * Test real: envia POST /store/order para esa mascota y valida:
+     * - que la API responda 200 OK.
+     * - que la orden creada tenga un id asignado.
+     * - que el petId de la orden coincida con el solicitado.
+     * - que el status de la orden sea "placed".
+     */
     @Test(testName = "Validate order creation for an avaliable pet")
     public void CreateOrderTests() {
         Map<String, String> queryParams = new HashMap<>();

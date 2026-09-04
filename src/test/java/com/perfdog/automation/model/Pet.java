@@ -7,7 +7,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-
+/**
+ * POJO que representa una mascota, segun el schema /pet de la
+ * Swagger Petstore API. Se usa para deserializar tanto un unico
+ * pet (GET /pet/{id}) como listas de pets (GET /pet/findByStatus).
+ */
 @Data
 @Builder
 @AllArgsConstructor

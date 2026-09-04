@@ -11,8 +11,21 @@ import java.util.List;
 import java.util.Map;
 
 import static org.testng.Assert.*;
-
+/**
+ * Funcionalidad 4: Consultar los datos de una mascota en especifico.
+ * Test independiente: obtiene un id valido consultando el catalogo
+ * disponible en el propio test, nunca usa un id hardcodeado.
+ */
 public class GetPetByIdTests extends TestRunner {
+
+    /**
+     * Setup: consulta GET /pet/findByStatus?status=available y toma
+     * el id de la primera mascota de la lista.
+     * Test real: consulta GET /pet/{petId} con ese id y valida:
+     * - que la API responda 200 OK.
+     * - que el id devuelto coincida con el solicitado.
+     * - que la mascota tenga un nombre asignado.
+     */
     @Test(testName = "Validate retrieval of a specific pet by id")
     public void getPetByIdTest(){
         Map<String,String> queryParams= new HashMap<>();
