@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PerfDog-API-SUITE" verbose="1"  parallel="methods" thread-count="2">
+    <test name="Users-API">
+        <classes>
+            <class name="com.perfdog.automation.test.CreateUserTests"></class>
+            <class name="com.perfdog.automation.test.LoginTests"></class>
+            <class name="com.perfdog.automation.test.LogoutTests"></class>
+        </classes>
+    </test>
+    
+    <test name="Pets-API">
+        <classes>
+            <class name="com.perfdog.automation.test.ListAvailablePetsTests"></class>
+            <class name="com.perfdog.automation.test.GetPetByIdTests"></class>
+        </classes>
+    </test>
+    
+    <test name="Store-API">
+        <classes>
+            <class name="com.perfdog.automation.test.CreateOrderTests"></class>
+        </classes>
+    </test>
+</suite>
